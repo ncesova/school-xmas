@@ -19,10 +19,10 @@ function App() {
           zoom={1} // Zoom factor when half the polar-max is reached
           rotation={[0, 0, 0]} // Default rotation
           polar={[0, Math.PI / 2]} // Vertical limits
-          azimuth={[-Infinity, Infinity]} // Horizontal limits
+          azimuth={[-Math.PI / 2, Math.PI / 2]} // Horizontal limits
           config={{mass: 1, tension: 170, friction: 26}} // Spring config
         >
-          <School />
+          <School receiveShadow />
           <Xmas
             position={[0 + 3, -1.5, -1.2]}
             scale={[SCALE + 0.2, SCALE + 0.2, SCALE + 0.2]}
@@ -38,7 +38,7 @@ function App() {
             С НОВЫМ ГОДОМ!
             <meshPhongMaterial color={"#fa4848"} />
           </Text3D>
-          <ambientLight castShadow intensity={1} color={"white"} />
+          <ambientLight intensity={1} color={"#ffffe3"} />
           <directionalLight
             castShadow
             intensity={3}
